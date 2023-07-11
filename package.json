@@ -1,0 +1,23 @@
+{
+  "name": "asset-management",
+  "version": "1.0.0",
+  "description": "Main project, asset management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zanarddi/Asset-Management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zanarddi/Asset-Management/issues"
+  },
+  "homepage": "https://github.com/Zanarddi/Asset-Management#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
