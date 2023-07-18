@@ -6,7 +6,7 @@ CREATE TABLE types (
 );
 
 CREATE TABLE assets (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     model TEXT,
     description TEXT,
     state TEXT NOT NULL,
