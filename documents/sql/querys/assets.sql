@@ -1,10 +1,3 @@
-CREATE TABLE types (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    created_at DATETIME NOT NULL,
-    updated_at DATETIME NOT NULL
-);
-
 CREATE TABLE assets (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     model TEXT,
