@@ -7,7 +7,13 @@
     "build": "tsc",
     "dev": "nodemon ./src/index.ts",
     "start": "node ./dist/index.js",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "db:createMigration": "cd ./src/database/migrations && typeorm migration:create",
+    "db:migrationRun": "npm run build && npx typeorm-ts-node-commonjs migration:run -d src/database/DataSource.ts",
+    "db:migrationRevert": "typeorm-ts-node-commonjs migration:revert -d src/database/DataSource.ts",
+    "db:migrationRunFake": "npm run build && npx typeorm-ts-node-commonjs migration:run -d src/database/DataSource.ts --fake",
+    "db:migrationRevertFake": "typeorm-ts-node-commonjs migration:revert -d src/database/DataSource.ts --fake"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +26,8 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.17",
     "winston": "^3.10.0"
   }
 }
